@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Fragment1 fragment1;
@@ -33,20 +34,28 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.fragment1:
-                getSupportFragmentManager()
+                if (!fragment1.isVisible())
+                    getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.frame,fragment1)
+                        .addToBackStack(null)
                         .commit();
                 return true;
             case R.id.fragment2:
-                getSupportFragmentManager()
+                if (!fragment2.isVisible())
+                    getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.frame,fragment2)
+                        .addToBackStack(null)
                         .commit();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void create(MenuItem item) {
+        Toast.makeText(this, "Bonjour drawer", Toast.LENGTH_SHORT).show();
     }
 }
 
