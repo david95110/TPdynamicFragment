@@ -4,7 +4,9 @@
 
     <item
         android:id="@+id/fragment1"
-        android:title="fragment1" />
+        android:icon="@android:drawable/ic_input_add"
+        android:title="fragment1"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/fragment2"
         android:title="fragment2" />
