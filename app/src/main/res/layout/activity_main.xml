@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    layout_width=""
+    layout_height=""
+    >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,3 +18,4 @@
 
     </FrameLayout>
 </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
